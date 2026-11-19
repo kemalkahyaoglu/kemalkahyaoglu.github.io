@@ -1,0 +1,20 @@
+# ============================================================
+#  KEMAL KAHYAOĞLU VIP · UZMAN ANALİZLERİ (Günün VIP Teknik Analizi)
+# ============================================================
+#  Her analiz bir blok. Blokları  ---  satırıyla ayırın.
+#  En alta yazılan analiz sitede "Günün Analizi" olarak görünür;
+#  öncekiler "Önceki Analizler" listesine iner.
+#
+#  TARİH  : 19.11.2026
+#  UZMAN  : Uzmanın adı soyadı
+#  UNVAN  : (isteğe bağlı) VIP Uzman
+#  SEMBOL : XAUUSD, NASDAQ, XAGUSD ... (canlı grafik bu sembolle açılır)
+#  GÖRÜŞ  : Düşüş / Yükseliş / Nötr
+#  KRİTİK, DESTEK, DİRENÇ, HEDEF : (isteğe bağlı) seviyeler
+#  GÖRSEL : (isteğe bağlı) analiz/resim1.jpg, analiz/resim2.jpg
+#           → yoksa sembolün canlı grafiği gösterilir
+#  BAŞLIK : Analizin başlığı
+#  METİN  : (bu satırdan sonra analizin tamamı; paragraflar arasında boş satır)
+#
+#  "#" ile başlayan satırlar sitede GÖRÜNMEZ.
+# ============================================================
