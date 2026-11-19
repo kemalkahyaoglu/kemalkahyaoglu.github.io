@@ -1742,6 +1742,7 @@ function initGate(){
   const py = getYat(); if (py){ $("#gateYatAd").value = py.ad; $("#gateYatLogin").value = py.login; }
   const pre = getUz(); if (pre){ $("#gateUzAd").value = pre.ad; $("#gateUzTel").value = pre.tel; }
   if (CONFIG.sabitUzman && CONFIG.sabitUzman.tel) $("#gateUzWrap").style.display = "none";
+  else if (CONFIG.sabitUzman && CONFIG.sabitUzman.ad && !$("#gateUzAd").value) $("#gateUzAd").value = CONFIG.sabitUzman.ad;   // ad hazır gelir, numarayı yatırımcı yazar
   setTimeout(() => $("#gatePw").focus(), 300);
   $("#gateForm").onsubmit = async e => {
     e.preventDefault();
