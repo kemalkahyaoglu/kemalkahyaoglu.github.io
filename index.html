@@ -156,6 +156,50 @@ label{font-size:12px;color:var(--mut);display:block;margin:10px 0 5px;letter-spa
 .dot.open{background:var(--up);box-shadow:0 0 10px var(--up)}
 ul.feat{list-style:none;margin-top:10px}
 ul.feat li{padding:5px 0 5px 22px;position:relative;font-size:14px}
+.rb-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 8px}
+.rb-tabs button{all:unset;cursor:pointer;padding:10px 16px;border-radius:12px;border:1px solid var(--line);color:var(--mut);font-size:13.5px;transition:.2s}
+.rb-tabs button b{margin-left:6px;font-size:11.5px;padding:2px 8px;border-radius:10px;background:rgba(255,255,255,.05)}
+.rb-tabs button.on{border-color:var(--gold);color:var(--txt);background:linear-gradient(135deg,rgba(200,68,91,.18),rgba(16,185,129,.06))}
+.rb-note{font-size:12.5px;color:var(--mut);margin-bottom:12px}
+.rb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rbc{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(255,255,255,.015);display:flex;flex-direction:column;gap:7px;animation:indin .45s ease both;transition:transform .25s,border-color .25s}
+.rbc:hover{transform:translateY(-3px);border-color:rgba(200,68,91,.55)}
+.rbc:before{content:"";position:absolute;top:0;left:-40%;width:40%;height:2px;background:linear-gradient(90deg,transparent,var(--emr2),transparent);animation:rbscan 3.8s linear infinite}
+@keyframes rbscan{to{left:100%}}
+.rbc .rh{display:flex;align-items:center;gap:10px}
+.rbc .ri{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(200,68,91,.12);flex:none}
+.rbc b{font-size:14.5px;line-height:1.3}
+.rbc .tf{margin-left:auto;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:8px;border:1px solid rgba(16,185,129,.45);color:var(--emr2);white-space:nowrap}
+.rbc .rd{font-size:12.5px;color:var(--mut);line-height:1.5;flex:1}
+.rbc .rm{display:flex;gap:5px;flex-wrap:wrap;font-size:11px;color:var(--mut)}
+.rbc .rm span{border:1px solid var(--line);border-radius:12px;padding:2px 8px}
+.rbc .rs{font-size:10px;letter-spacing:1.2px;color:var(--emr2)}
+.rbc .rs:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--emr);margin-right:5px;vertical-align:1px;box-shadow:0 0 8px var(--emr);animation:anlive 1.8s infinite}
+.rbc .rs.soon{color:var(--mut)}.rbc .rs.soon:before{background:var(--mut);box-shadow:none;animation:none}
+.rbc a{font-size:12px;color:var(--gold2)}
+@media (max-width:1100px){.rb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rb-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rbc:before{animation:none;display:none}}
+.ind-cats{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+.ind-cats button{all:unset;cursor:pointer;font-size:12.5px;padding:6px 13px;border-radius:20px;border:1px solid var(--line);color:var(--mut);transition:.2s}
+.ind-cats button:hover{color:var(--txt)}
+.ind-cats button.on{border-color:var(--gold);color:var(--gold2);background:rgba(200,68,91,.1)}
+.ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ind{position:relative;border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;background:rgba(255,255,255,.015);display:flex;flex-direction:column;gap:6px;transition:transform .25s,border-color .25s,box-shadow .25s;animation:indin .45s ease both}
+.ind:hover{transform:translateY(-3px);border-color:rgba(200,68,91,.55);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+@keyframes indin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ind .ih{display:flex;align-items:center;gap:10px}
+.ind .ii{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(200,68,91,.12);flex:none}
+.ind b{font-size:14px;line-height:1.3}
+.ind .id{font-size:12.5px;color:var(--mut);line-height:1.5;flex:1}
+.ind .im{display:flex;gap:5px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--mut)}
+.ind .im span{border:1px solid var(--line);border-radius:12px;padding:2px 8px}
+.ind .st{align-self:flex-start;font-size:10px;letter-spacing:1.2px;color:var(--emr2);margin-bottom:2px}
+.ind .st:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--emr);margin-right:5px;vertical-align:1px;box-shadow:0 0 8px var(--emr)}
+.ind .st.soon{color:var(--mut)}.ind .st.soon:before{background:var(--mut);box-shadow:none}
+.ind a{font-size:12px;color:var(--gold2);margin-top:2px}
+@media (max-width:1100px){.ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ind-grid{grid-template-columns:1fr}}
 ul.feat li:before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:10px;top:8px}
 .pkg{text-align:center;padding:28px 22px}
 .pkg .tier{font-family:"Cormorant Garamond";font-size:30px}
@@ -546,6 +590,12 @@ body.locked #gate{display:flex}
     <section id="s-algo">
       <div class="sec-head"><h2 class="gold">Algoritma & İndikatörlerimiz</h2><div class="muted">Kemal Kahyaoğlu VIP'e özel araçlar.</div></div>
       <div class="grid g3" id="algoCards" style="margin-bottom:18px"></div>
+      <div class="card" style="margin-bottom:18px">
+        <div class="prod-head" style="flex-wrap:wrap;gap:10px"><div><h3 style="margin:0">📚 İndikatör Kütüphanesi <span class="chip g" id="indCount"></span></h3><div class="muted small">MT5 uyumlu araçlarımız. Kurulum ve kullanım için uzmanınızdan destek alın.</div></div>
+          <input id="indQ" placeholder="🔎 İndikatör ara..." style="max-width:240px"></div>
+        <div class="ind-cats" id="indCats"></div>
+        <div class="ind-grid" id="indGrid"></div>
+      </div>
       <div class="card">
         <div class="prod-head"><h3>Anlık Teknik Özet</h3><select id="taSym" style="width:200px"></select></div>
         <div class="muted small">Kaynak: TradingView teknik göstergeler özeti (otomatik). Al-sat tavsiyesi değildir.</div>
@@ -655,6 +705,13 @@ body.locked #gate{display:flex}
 
       <div class="sec-head" style="margin-top:28px"><h3>Robot Özellikleri</h3></div>
       <div class="grid g4" id="rbFeatures" style="margin-bottom:20px"></div>
+
+      <div class="card" style="margin-bottom:20px">
+        <div class="prod-head" style="flex-wrap:wrap;gap:10px"><div><h3 style="margin:0">🤖 Robot Filomuz <span class="chip g" id="rbCount"></span></h3><div class="muted small">MT5 uyumlu tam otomatik ve yarı manuel robotlarımız. Kurulum ve risk ayarı için uzmanınızla görüşün.</div></div></div>
+        <div class="rb-tabs"><button data-rt="ea" class="on">⚙️ Tam Otomatik (EA) <b id="rtEa"></b></button><button data-rt="yari">🕹️ Yarı Manuel <b id="rtYari"></b></button></div>
+        <div class="rb-note" id="rbNote"></div>
+        <div class="rb-grid" id="rbGrid"></div>
+      </div>
 
       <div class="grid g2">
         <div class="card"><h3>MT5 Hesabınızı Bağlayın</h3><ol class="steps" id="robotSteps" style="margin-top:8px"></ol></div>
@@ -824,7 +881,7 @@ const CONFIG = {
     {
       ad: "Trend Radar",
       etiket: "Algoritma",
-      ozet: "Birden fazla zaman diliminde trend yönünü birleştirerek ana yönü özetler. (Örnek kart — kendi aracınızla değiştirin.)",
+      ozet: "Birden fazla zaman diliminde trend yönünü birleştirerek ana yönü özetler.",
       ozellikler: ["Çoklu zaman dilimi analizi", "Renkli trend paneli", "Haber saatlerinde uyarı"],
       enstrumanlar: ["Majör pariteler", "Altın"],
       zaman: "H1 – D1"
@@ -832,11 +889,51 @@ const CONFIG = {
     {
       ad: "Volatilite Kalkanı",
       etiket: "Risk Aracı",
-      ozet: "Piyasa oynaklığına göre stop mesafesi ve pozisyon büyüklüğü önerisi sunar. (Örnek kart — kendi aracınızla değiştirin.)",
+      ozet: "Piyasa oynaklığına göre stop mesafesi ve pozisyon büyüklüğü önerisi sunar.",
       ozellikler: ["ATR tabanlı stop hesabı", "Otomatik lot önerisi", "Seans bazlı volatilite"],
       enstrumanlar: ["Tüm enstrümanlar"],
       zaman: "Tümü"
     }
+  ],
+
+  // İNDİKATÖR KÜTÜPHANESİ — her satır: [Ad, Kategori, Kısa açıklama, Zaman dilimi, Durum]
+  // Durum: "Aktif" veya "Yakında". Satırı silmek ya da adını değiştirmek yeterli.
+  indikatorler: [
+    ["KK Trend Pusulası","Trend","Birden fazla zaman dilimindeki trend yönünü tek panelde birleştirir.","M15 – D1","Aktif"],
+    ["Kahyaoğlu Supertrend+","Trend","ATR tabanlı trend takip çizgisi; yön değişiminde renk ve ok verir.","M5 – H4","Aktif"],
+    ["Dinamik EMA Kurdelesi","Trend","EMA 21/50/200 kurdelesi ile trendin gücünü ve yönünü gösterir.","Tümü","Aktif"],
+    ["Kanal Avcısı","Trend","Yükselen ve düşen kanalları otomatik çizer, bant temaslarını işaretler.","H1 – D1","Aktif"],
+    ["Trend Gücü Ölçer","Trend","ADX mantığıyla trendin gücünü 0–100 ölçeğinde gösterir.","Tümü","Aktif"],
+    ["Bulut Kanal","Trend","Ichimoku bulutunun sadeleştirilmiş, okunması kolay sürümü.","H1 – D1","Aktif"],
+    ["RSI Uyumsuzluk Dedektörü","Momentum","Fiyat ile RSI arasındaki pozitif/negatif uyumsuzlukları işaretler.","M15 – H4","Aktif"],
+    ["Momentum Dalgası","Momentum","Renkli MACD histogramı ile ivmenin artışını ve zayıflamasını gösterir.","Tümü","Aktif"],
+    ["Stokastik Keskin Nişancı","Momentum","Aşırı alım-satım bölgelerinden dönüşleri filtreli şekilde işaretler.","M5 – H1","Aktif"],
+    ["Aşırı Alım-Satım Isı Haritası","Momentum","Majör paritelerde RSI durumunu tek tabloda renklerle özetler.","H1 – D1","Aktif"],
+    ["Hız Osilatörü","Momentum","Fiyatın değişim hızını (ROC) ölçerek ivme kayıplarını gösterir.","Tümü","Aktif"],
+    ["ATR Stop Mesafesi","Volatilite","Güncel oynaklığa göre makul stop mesafesini grafikte çizer.","Tümü","Aktif"],
+    ["Bollinger Sıkışma Alarmı","Volatilite","Bantların daraldığı sıkışma dönemlerini ve olası kırılımı işaretler.","M15 – H4","Aktif"],
+    ["Volatilite Rejimi","Volatilite","Piyasanın sakin, normal veya yüksek oynaklık evresinde olduğunu gösterir.","H1 – D1","Aktif"],
+    ["Keltner Kırılım","Volatilite","Keltner kanalı dışına taşan güçlü hareketleri yakalar.","M15 – H4","Aktif"],
+    ["Hacim Profili Lite","Hacim & Akış","En çok işlem gören fiyat seviyesini (POC) ve değer alanını gösterir.","Tümü","Aktif"],
+    ["VWAP Seans Çapası","Hacim & Akış","Seans bazlı VWAP ve sapma bantlarını çizer.","M1 – H1","Aktif"],
+    ["Para Akışı Endeksi+","Hacim & Akış","Hacim ağırlıklı alım-satım baskısını gösterir.","Tümü","Aktif"],
+    ["Tick Hacim Patlaması","Hacim & Akış","Ortalamanın üzerindeki ani hacim artışlarını işaretler.","M1 – M15","Aktif"],
+    ["Otomatik Destek-Direnç","Yapı & Formasyon","Önemli destek ve direnç seviyelerini otomatik çizer.","Tümü","Aktif"],
+    ["Arz-Talep Bölgeleri","Yapı & Formasyon","Güçlü tepki alınan arz ve talep bölgelerini kutularla gösterir.","M15 – D1","Aktif"],
+    ["Likidite Avı Tespiti","Yapı & Formasyon","Önceki tepe/diplerin altında-üstünde yapılan stop avlarını işaretler.","M5 – H1","Aktif"],
+    ["Piyasa Yapısı (BOS/CHoCH)","Yapı & Formasyon","Yapı kırılımlarını ve karakter değişimlerini etiketler.","M5 – H4","Aktif"],
+    ["Otomatik Fibonacci","Yapı & Formasyon","Son belirgin dalgaya göre Fibonacci seviyelerini kendisi çizer.","Tümü","Aktif"],
+    ["Formasyon Tarayıcı","Yapı & Formasyon","Bayrak, flama, OBO ve üçgen gibi formasyonları tarar.","H1 – D1","Aktif"],
+    ["Mum Formasyonu Okuyucu","Yapı & Formasyon","Yutan, çekiç, doji gibi mum formasyonlarını etiketler.","Tümü","Aktif"],
+    ["Pivot Seviyeleri Pro","Yapı & Formasyon","Günlük, haftalık ve aylık pivot seviyelerini birlikte gösterir.","Tümü","Aktif"],
+    ["ForexScalper Pro","Scalping","Kısa vadeli giriş-çıkış bölgelerini işaretleyen özel scalping aracı.","M1 – M15","Aktif"],
+    ["Altın Scalp Radarı","Scalping","XAUUSD'ye özel hızlı hareket ve kırılım bölgelerini gösterir.","M1 – M5","Aktif"],
+    ["Hızlı Giriş Okları","Scalping","Kısa vadeli momentum teyitli giriş oklarını grafiğe çizer.","M1 – M15","Aktif"],
+    ["Spread & Seans Filtresi","Scalping","Spreadin yüksek olduğu ve likiditenin düştüğü saatleri işaretler.","M1 – M15","Aktif"],
+    ["Volatilite Kalkanı","Risk & Zaman","ATR'ye göre stop mesafesi ve lot büyüklüğü önerisi sunar.","Tümü","Aktif"],
+    ["Günlük Risk Paneli","Risk & Zaman","Günlük kâr hedefi, zarar limiti ve açık riski tek panelde gösterir.","Tümü","Aktif"],
+    ["Seans Kutuları","Risk & Zaman","Asya, Londra ve New York seanslarını grafikte renkli kutularla gösterir.","M5 – H1","Aktif"],
+    ["Haber Saati Uyarıcı","Risk & Zaman","Önemli veri saatlerinden önce grafikte uyarı gösterir.","Tümü","Aktif"]
   ],
 
   // Ürün kartları (yaklaşım metinleri eğitim amaçlıdır)
@@ -852,6 +949,36 @@ const CONFIG = {
   ],
 
   // VIP Robot / Copy Trade  (getiri / para rakamı yok — yalnızca özellikler)
+  // ROBOT FİLOSU — her satır: [Ad, Zaman dilimi, Piyasa, Stil, Kısa açıklama, Durum ("Aktif" / "Yakında")]
+  robotlar: {
+    ea: [
+      ["Resistance Destroyer","15M","XAUUSD","Kırılım","Güçlü direnç bölgelerinin hacimli kırılımlarını yakalar, sahte kırılımları filtreler.","Aktif"],
+      ["Keep Calm and Trend","1H","Majör pariteler","Trend takip","Ana trend yönünde sakin ve sabırlı işlem açar; ters sinyallerde beklemeye geçer.","Aktif"],
+      ["AE v2.333 IIIO.pro","5M","XAUUSD","Scalping","Kısa vadeli momentum patlamalarında hızlı giriş-çıkış yapan scalping robotu.","Aktif"],
+      ["Golden Night Owl v1.8","15M","XAUUSD","Asya seansı","Düşük oynaklıktaki Asya seansında dar aralık işlemlerine odaklanır.","Aktif"],
+      ["London Breaker X","30M","GBPUSD · EURUSD","Seans kırılımı","Londra açılışında Asya aralığının kırılımını işler.","Aktif"],
+      ["Mean Reversion Monk","4H","Majör pariteler","Ortalamaya dönüş","Aşırı uzaklaşan fiyatın ortalamaya dönüş hareketlerini hedefler.","Aktif"],
+      ["NasDaq Nitro 2.0","5M","NAS100","Momentum","ABD açılışındaki güçlü momentum hareketlerini takip eder.","Aktif"],
+      ["Swing Sniper Pro","4H","XAUUSD · XAGUSD","Swing","Günler süren swing hareketlerinde seçici ve az sayıda işlem açar.","Aktif"],
+      ["KK Volatility Hunter","15M","Çoklu piyasa","Volatilite","Sıkışma sonrası oynaklık genişlemesinde pozisyon alır.","Aktif"],
+      ["Dow Rider v4.06","1H","US30","Trend takip","Dow Jones endeksinde trend yönlü dalgaları takip eder.","Aktif"],
+      ["Silent Range Master v3.1","1H","EURUSD","Yatay piyasa","Yatay seyreden piyasada bant içi alım-satım yapar; trend başlayınca durur.","Aktif"]
+    ],
+    yari: [
+      ["Trade Copilot KK v2.1","Tümü","Tüm piyasalar","İşlem yönetimi","Sizin açtığınız işleme otomatik SL/TP ve iz süren stop ekler.","Aktif"],
+      ["One-Click Sniper Panel","Tümü","Tüm piyasalar","Emir paneli","Risk yüzdenize göre lotu hesaplayıp tek tıkla emir girer.","Aktif"],
+      ["Breakeven Guardian","Tümü","Tüm piyasalar","Koruma","İşlem belirli kâra ulaşınca stopu giriş seviyesine taşır.","Aktif"],
+      ["Partial Close Pro 3TP","Tümü","Tüm piyasalar","Kâr alma","Pozisyonu üç hedefte kademeli kapatır, kalanı iz süren stopla taşır.","Aktif"],
+      ["Zone Trader Assist","1H","XAUUSD · Majörler","Bölge işlemi","Arz-talep bölgelerine bekleyen emir önerir; onayınızla yerleştirir.","Aktif"],
+      ["Fibo Entry Helper","4H","Tüm piyasalar","Geri çekilme","Fibonacci geri çekilme seviyelerinde giriş fırsatlarını işaretler, onayınızı bekler.","Aktif"],
+      ["News Shield Manual","Tümü","Tüm piyasalar","Haber koruması","Önemli veri öncesi uyarır; açık işlemler için tek tıkla koruma sunar.","Aktif"],
+      ["Grid Pilot Semi v2.0","1H","EURUSD · GBPUSD","Kademeli emir","Sınırlı sayıda kademeli emri yalnızca sizin onayınızla açar.","Aktif"],
+      ["Smart Hedge Assistant v1.4","Tümü","Tüm piyasalar","Riskten korunma","Ters harekette korunma pozisyonu önerir; karar sizde kalır.","Aktif"],
+      ["Basket Closer X","Tümü","Tüm piyasalar","Sepet yönetimi","Tüm açık işlemleri toplam kâr veya zarar hedefinde birlikte kapatır.","Aktif"],
+      ["Risk Calculator Live v5","Tümü","Tüm piyasalar","Risk yönetimi","Bakiye, stop mesafesi ve risk yüzdesine göre anlık lot gösterir.","Aktif"]
+    ]
+  },
+
   robot: {
     durum: "SİSTEM AKTİF · 7/24",
     piyasalar: ["XAUUSD","EURUSD","GBPUSD","USDJPY","XAGUSD","AUDUSD","USDCAD","USDCHF","NAS100","US30"],
@@ -1009,6 +1136,24 @@ function initAlgo(){
       <ul class="feat">${a.ozellikler.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
       <div style="margin-top:10px">${a.enstrumanlar.map(e => `<span class="chip">${esc(e)}</span>`).join("")}<span class="chip">⏱ ${esc(a.zaman)}</span></div>
     </div>`).join("");
+  const IC = {"Trend":"📈","Momentum":"⚡","Volatilite":"🌊","Hacim & Akış":"📊","Yapı & Formasyon":"🧩","Scalping":"🎯","Risk & Zaman":"🛡️"};
+  const L = (CONFIG.indikatorler||[]).map(([ad,kat,oz,zm,du]) => ({ad,kat,oz,zm,du:du||"Aktif"}));
+  const cats = ["Tümü", ...new Set(L.map(x=>x.kat))]; let cat = "Tümü";
+  $("#indCount").textContent = L.length + " araç";
+  const drawInd = () => {
+    const q = ($("#indQ").value||"").toLocaleLowerCase("tr-TR");
+    const f = L.filter(x => (cat==="Tümü"||x.kat===cat) && (!q || (x.ad+" "+x.oz+" "+x.kat).toLocaleLowerCase("tr-TR").includes(q)));
+    $("#indGrid").innerHTML = f.length ? f.map((x,i) => `<div class="ind" style="animation-delay:${Math.min(i,16)*30}ms">
+      <span class="st ${x.du==="Aktif"?"":"soon"}">${esc(x.du.toLocaleUpperCase("tr-TR"))}</span>
+      <div class="ih"><div class="ii">${IC[x.kat]||"◆"}</div><b>${esc(x.ad)}</b></div>
+      <div class="id">${esc(x.oz)}</div>
+      <div class="im"><span>${esc(x.kat)}</span><span>⏱ ${esc(x.zm)}</span><span>MT5</span></div>
+      <a target="_blank" rel="noopener" href="${waLink(x.ad+" indikatörü hakkında bilgi ve kurulum desteği almak istiyorum.")}">💬 Bilgi & kurulum iste →</a></div>`).join("")
+      : `<div class="muted" style="grid-column:1/-1;text-align:center;padding:20px">Aramanıza uygun indikatör bulunamadı.</div>`;
+  };
+  $("#indCats").innerHTML = cats.map(c => `<button data-cat="${esc(c)}" class="${c===cat?"on":""}">${esc(c)}${c==="Tümü"?"":" · "+L.filter(x=>x.kat===c).length}</button>`).join("");
+  $("#indCats").querySelectorAll("button").forEach(b => b.onclick = () => { cat = b.dataset.cat; $("#indCats").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b)); drawInd(); });
+  $("#indQ").oninput = drawInd; drawInd();
   $("#taSym").innerHTML = CONFIG.semboller.map(s => `<option value="${esc(s.tv)}">${esc(s.ad)}</option>`).join("");
   const draw = () => tvWidget("taBox","technical-analysis",{interval:"1h",width:"100%",height:"100%",symbol:$("#taSym").value,showIntervalTabs:true,displayMode:"multiple"});
   $("#taSym").onchange = draw; draw();
@@ -1105,6 +1250,22 @@ function initRobot(){
   $("#rbFeatures").innerHTML = r.ozellikler.map(([ic,t,d],i) =>
     `<div class="card feat-card" style="animation-delay:${i*0.08}s"><div class="fi">${ic}</div><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join("");
   $("#robotSteps").innerHTML = r.adimlar.map(a => `<li>${esc(a)}</li>`).join("");
+  const RB = CONFIG.robotlar || {ea:[],yari:[]};
+  const NOTE = {ea:"Tam otomatik robotlar kurallarına göre işlemi kendisi açar ve yönetir. Risk ayarı hesabınıza göre yapılır.",
+                yari:"Yarı manuel robotlarda karar sizdedir; robot giriş, lot, stop ve kâr alma yönetiminde size yardımcı olur."};
+  $("#rbCount").textContent = (RB.ea.length + RB.yari.length) + " robot";
+  $("#rtEa").textContent = RB.ea.length; $("#rtYari").textContent = RB.yari.length;
+  const drawRb = t => {
+    $("#rbNote").textContent = NOTE[t];
+    $("#rbGrid").innerHTML = RB[t].map(([ad,tf,pz,st,oz,du],i) => { du = du||"Aktif"; return `<div class="rbc" style="animation-delay:${i*35}ms">
+      <div class="rh"><div class="ri">${t==="ea"?"🤖":"🕹️"}</div><b>${esc(ad)}</b><span class="tf">${esc(tf)}</span></div>
+      <span class="rs ${du==="Aktif"?"":"soon"}">${esc(du.toLocaleUpperCase("tr-TR"))}</span>
+      <div class="rd">${esc(oz)}</div>
+      <div class="rm"><span>${t==="ea"?"Tam otomatik":"Yarı manuel"}</span><span>${esc(st)}</span><span>${esc(pz)}</span><span>MT5</span></div>
+      <a target="_blank" rel="noopener" href="${waLink(ad+" ("+(t==="ea"?"EA":"yarı manuel")+") robotu hakkında bilgi ve kurulum desteği almak istiyorum.")}">💬 Bilgi & kurulum iste →</a></div>`; }).join("");
+  };
+  document.querySelectorAll("[data-rt]").forEach(b => b.onclick = () => { document.querySelectorAll("[data-rt]").forEach(x=>x.classList.toggle("on",x===b)); drawRb(b.dataset.rt); });
+  drawRb("ea");
   const msg = CONFIG.marka + " VIP Robot copy trade bağlantısı hakkında bilgi almak istiyorum.";
   $("#rbConnect").href = waLink(msg); $("#rbConnect2").href = waLink(msg);
 }
@@ -1638,7 +1799,7 @@ function initHomeKpisOnly(){
   const u = uzNow();
   $("#homeKpis").innerHTML = [
     ["VIP Robot",'<span class="up" style="font-size:20px">● Aktif</span>'],
-    ["Aktif Algoritma",esc(CONFIG.algoritmalar.length+" araç")],
+    ["Algoritma & İndikatör",esc((CONFIG.algoritmalar.length+(CONFIG.indikatorler||[]).length)+" araç")],
     ["İzlenen Enstrüman",esc(CONFIG.urunler.length+" ürün")],
     ["Kişisel Uzmanınız", u ? `<a href="${waLink("Merhaba, VIP panelden yazıyorum.")}" target="_blank" rel="noopener" style="font-size:19px">💬 ${esc(u.ad)}</a>` : '<span class="muted" style="font-size:16px">Tanımlı değil</span>']
   ].map(([l,v]) => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div></div>`).join("");
